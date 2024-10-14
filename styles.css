@@ -24,6 +24,12 @@ header h1 {
     color: #ffffff;
     margin-bottom: 20px;
 }
+header h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
 
 .slider-container {
     width: 100%;
