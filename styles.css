@@ -1,0 +1,177 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+	font-family: 'Poppins', sans-serif;	
+	background: linear-gradient(135deg, #f582bb 0%, #eb65eb 100%);
+    /*background-color: #fff0f5;*/
+    color: #333;
+    text-align: center;
+    padding: 20px;
+	
+	/*overflow-x: hidden;*/
+	overflow-y: auto;
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 100%;
+    margin:auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+	box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+	margin-top: 10px;
+}
+
+.dedication {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .caption {
+        font-size: 1em;
+    }
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+.heart {
+    width: 20px; /* Ancho del corazón */
+    height: 20px; /* Altura del corazón */
+    position: absolute;
+    background-color: #ff69b4; /* Color del corazón */
+    transform: rotate(45deg); /* Rotación para dar forma de corazón */
+    animation: float 5s infinite ease-in-out; /* Animación de flotación */
+}
+
+.heart::before,
+.heart::after {
+    content: ""; /* Crea el contenido vacío para el pseudoelemento */
+    width: 20px; /* Mismo tamaño que el corazón */
+    height: 20px; /* Mismo tamaño que el corazón */
+    border-radius: 50%; /* Redondeo para las formas circulares */
+    background-color: #ff69b4; /* Mismo color que el corazón */
+    position: absolute;
+}
+
+/* Posicionamiento del corazón */
+.heart::before {
+    top: -10px; /* Ajuste para que se superponga en la parte superior */
+    left: 0; /* Centrado en la parte superior */
+}
+
+.heart::after {
+    left: 10px; /* Ajuste para que se superponga a la derecha */
+    top: 0; /* Centrado en la parte lateral */
+}
+
+
+/* Animaciones y posicionamiento para cada corazón */
+.heart:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+}
+
+.heart:nth-child(2) {
+    left: 20%;
+    animation-duration: 7s;
+}
+
+.heart:nth-child(3) {
+    left: 30%;
+    animation-duration: 6s;
+}
+
+.heart:nth-child(4) {
+    left: 40%;
+    animation-duration: 4s;
+}
+
+.heart:nth-child(5) {
+    left: 50%;
+    animation-duration: 8s;
+}
+
+.heart:nth-child(6) {
+    left: 60%;
+    animation-duration: 5s;
+}
+
+.heart:nth-child(7) {
+    left: 17%;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+
+.heart:nth-child(8) {
+    left: 64%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.heart:nth-child(9) {
+    left: 90%;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
